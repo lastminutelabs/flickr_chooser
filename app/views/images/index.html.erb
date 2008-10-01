@@ -1,0 +1,30 @@
+
+<%= link_to 'list of lists', lists_path %> 
+or
+<%= link_to 'tag index for this list ', list_tags_path(@list) %> 
+or
+<%= link_to 'and new tag to this list', new_list_tag_path(@list) %> 
+
+<h1>List: <i><%= @list.name %></i> 
+images for tag: <i><%= h @tag.tagname %></i></h1>
+
+<br />
+
+<p> currently chosen...</p>
+<div id="images">
+  <%= render :partial => @images %>
+</div>
+
+
+<div >
+<p> more from flickr...</p>
+</div>
+<div id="more_search">
+  <%= render :partial => 'form' %>
+</div>
+
+<div id="flickrimages">
+
+
+</div>
+

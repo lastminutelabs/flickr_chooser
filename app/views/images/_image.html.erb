@@ -1,0 +1,17 @@
+
+<% # yeah 
+selectedimage = image.flickr  
+%>
+
+<span class="selectedimage" id="<%= selectedimage.id %>">
+
+    <a target="_preview" href="<%= selectedimage.url %>">
+  <img src="<%= selectedimage.url(:small) %>">
+</a>
+
+<br/>
+  <%= link_to_remote 'Remove', { :url => resource_path(image), :method => :delete } %>
+  
+</span>
+
+

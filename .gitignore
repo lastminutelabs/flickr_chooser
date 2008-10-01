@@ -1,0 +1,8 @@
+tmp/ruby_inline/.ruby_inline/*
+public/system/cache_images/*
+nbproject/*
+lib/data/????????.json
+log/*.log
+db/*.sqlite3
+config/flickr.yml
+

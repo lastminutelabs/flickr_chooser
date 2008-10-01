@@ -1,0 +1,19 @@
+
+form {
+  display: inline;
+  float: left;
+}
+
+span {
+  float: left;
+}
+
+div {
+  float:left;
+  clear: left;
+}
+
+.flickrimage {
+  margin: 2px;
+}
+

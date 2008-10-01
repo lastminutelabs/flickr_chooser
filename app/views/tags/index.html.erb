@@ -1,0 +1,27 @@
+<%= link_to 'list of lists', lists_path %>
+<h1>Listing tags for list: <%= h @list.name %></h1>
+
+
+<%= link_to 'download csv', formatted_resources_path("csv") %>
+
+
+<table>
+  <tr>
+    <th>Tagname</th>
+    <th>Images</th>
+  </tr>
+
+<% for tag in @tags %>
+  <tr>
+    <td><%=h tag.tagname %></td>
+    <td><%=h tag.images.map{|i| i.flickr_id}.join(",") %></td>
+    <td><%= link_to 'Show', resource_path(tag) %></td>
+    <td><%= link_to 'Edit', edit_resource_path(tag) %></td>
+    <td><%= link_to 'Destroy', resource_path(tag), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tag', new_resource_path %>

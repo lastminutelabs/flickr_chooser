@@ -1,0 +1,11 @@
+<form>
+
+  text:<%= text_field_tag 'q' , params[:q] || @tag.tagname %><br/>
+  page:<%= text_field_tag 'page' , (params[:page] ||  "0").to_i + 1  %><br/>
+
+  <%= submit_to_remote 'submit', 'get more images', 
+  :url => resources_url + ".js" , :method => :get ,
+      :loading => "$('get_more_button').value = 'Getting more...'", 
+      :html => { :id => 'get_more_button' } 
+  %>
+</form>

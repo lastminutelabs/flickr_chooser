@@ -1,0 +1,6 @@
+
+
+page.insert_html :bottom, 'images', :partial => @image
+
+page[@image.flickr_id].visual_effect(:highlight, :duration => 3, :startcolor => '#00ff00' )
+

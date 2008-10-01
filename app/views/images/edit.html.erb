@@ -1,0 +1,17 @@
+<h1>Editing image</h1>
+
+<% form_for_resource do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :flickr_id %><br />
+    <%= f.text_field :flickr_id %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', resource_path %> |
+<%= link_to 'Back', resources_path %>
+

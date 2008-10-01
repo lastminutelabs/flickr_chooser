@@ -1,0 +1,8 @@
+
+
+page['more_search'].replace_html :partial => 'form'
+
+page.insert_html :top, 'flickrimages',  '<hr style="clear: left;" />'
+page.insert_html :top, 'flickrimages',  :partial => 'flickrimage', :collection => @flickr_images
+
+

@@ -1,0 +1,20 @@
+<p>
+  <b>Name:</b>
+  <%=h @list.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @list.description %>
+</p>
+
+<p>
+  <%= link_to "the tags for this are here! click me", resource_tags_path %>
+</p>
+
+
+
+
+
+<%= link_to 'Edit', edit_list_path(@list) %> |
+<%= link_to 'Back', lists_path %>

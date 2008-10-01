@@ -1,0 +1,19 @@
+
+<span class="flickrimage" id="<%=flickrimage.id %>">
+<a target="_preview" href="<%= flickrimage.url(:large) %>">
+  <img src="<%= flickrimage.url(:small) %>">
+</a>
+
+<br/>
+
+<a target="_photopage" href="<%= flickrimage.url_photopage %>">
+url
+</a>
+
+  <% remote_form_for(Image.new(:flickr_id => flickrimage.id) , :url => resources_url ) do |f| %>
+    <%= f.hidden_field :flickr_id  %>
+    <%= submit_to_remote 'submit', 'Add', :url => resources_url  %>
+<% end %>
+
+</span>
+

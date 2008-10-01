@@ -1,0 +1,12 @@
+<p>
+  <b>Tagname:</b>
+  <%=h @tag.tagname %>
+</p>
+
+<p>
+  <%= link_to "images", resource_images_path  %>
+</p>
+
+
+<%= link_to 'Edit', edit_resource_path(@tag) %> |
+<%= link_to 'Back', resources_path %>

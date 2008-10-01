@@ -1,0 +1,5 @@
+
+
+page[@image.flickr_id].visual_effect(:fade, :duration => 1 )
+page.delay(1) { page[@image.flickr_id].remove }
+

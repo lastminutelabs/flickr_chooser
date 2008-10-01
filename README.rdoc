@@ -1,0 +1,29 @@
+== Welcome to flickr_chooser
+
+We needed some flickr images. This is a quick and dirty app.
+
+You'll need an update-to-date flickr_fu
+
+   gem sources -a http://gems.github.com
+   sudo gem install commonthread-flickr_fu
+
+and mime-types
+   sudo gem install mime-types
+
+create a config/flickr.yml file that has your flickr api key and
+looks like this:
+
+	key: 'ce10c78532e1fd..........'
+	secret: '00184......'
+then
+
+   rake db:migrate
+
+and access the site 
+
+  ./script/server
+  http://127.0.0.1:3000/
+
+
+	
+
