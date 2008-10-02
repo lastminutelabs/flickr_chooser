@@ -12,4 +12,27 @@ class ApplicationController < ActionController::Base
   # Uncomment this to filter the contents of submitted sensitive data parameters
   # from your application log (in this case, all fields with names like "password"). 
   # filter_parameter_logging :password
+  
+
+   before_filter :authenticate
+
+
+   private
+
+   
+   def authenticate
+
+     # if you want add USER_NAME="useranme" and PASSWORD="password" to config/initalizers/password.rb
+
+     if USER_NAME && PASSWORD
+       authenticate_or_request_with_http_basic do |user_name, password|
+         user_name == USER_NAME && password == PASSWORD
+       end
+     else
+       true
+     end
+   end
+
+  
+  
 end
