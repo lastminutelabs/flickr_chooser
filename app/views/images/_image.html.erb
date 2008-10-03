@@ -5,8 +5,14 @@ selectedimage = image.flickr
 
 <span class="selectedimage" id="<%= selectedimage.id %>">
 
-    <a target="_preview" href="<%= selectedimage.url %>">
-  <img src="<%= selectedimage.url(:small) %>">
+    <a target="_preview" href="<%= selectedimage.url rescue "" %>">
+      <img src="<%= 
+       begin 
+       selectedimage.url(:small)
+       rescue 
+       "/images/photo_not_found.png"
+       end
+      %>">
 </a>
 
 <br/>
