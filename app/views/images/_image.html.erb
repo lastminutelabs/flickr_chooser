@@ -10,7 +10,7 @@ selectedimage = image.flickr
        begin 
        selectedimage.url(:small)
        rescue 
-       "/images/photo_not_found.png"
+       image_path "photo_not_found.png" 
        end
       %>">
 </a>
