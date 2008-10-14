@@ -1,1 +1,0 @@
-require File.dirname(__FILE__) + '/common_thread/xml/xml_magic'
