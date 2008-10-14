@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
 
      # if you want add USER_NAME="useranme" and PASSWORD="password" to config/initalizers/password.rb
 
-     if USER_NAME && PASSWORD
+     if defined?(USER_NAME) && defined?(PASSWORD)
        authenticate_or_request_with_http_basic do |user_name, password|
          user_name == USER_NAME && password == PASSWORD
        end
